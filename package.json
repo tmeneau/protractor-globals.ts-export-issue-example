@@ -1,0 +1,26 @@
+{
+  "name": "typescript-compilation-dirs-issue",
+  "version": "1.0.0",
+  "description": "test project to determine source of incorrect compiled typescript directory structure",
+  "scripts": {
+    "postinstall": "typings install",
+    "typings": "typings",
+    "clean": "rm -rf ./compiled",
+    "tsc": "./node_modules/typescript/bin/tsc",
+    "compile": "npm run clean && npm run tsc -- -p src-with-globals.ts/tsconfig.json && npm run tsc -- -p src-with-no-globals.ts/tsconfig.json",
+    "show": "npm run compile && ./node_modules/nodetree/cli.js compiled"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "author": "tmeneau@xetus.com",
+  "license": "ISC",
+  "devDependencies": {
+    "nodetree": "0.0.3",
+    "protractor": "^4.0.3",
+    "typescript": "^2.0.0"
+  },
+  "dependencies": {
+    "@types/node": "^6.0.34"
+  }
+}

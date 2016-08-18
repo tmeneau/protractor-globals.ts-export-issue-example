@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "rootDirs": [
+      "./test"
+    ],
+    "outDir": "../compiled/incorrect",
+    "types": ["node"]
+  },
+  "filesGlob": [
+    "./test/**/*.ts"
+  ],
+  "exclude": [
+    "../node_modules",
+    "../compiled",
+    "../src-working"
+  ],
+  "compileOnSave": false
+}
+
